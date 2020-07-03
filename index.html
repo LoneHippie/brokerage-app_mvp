@@ -13,14 +13,14 @@
 <body>
    
     <nav class="navbar">
-        <img class="navbar__btn" id="open" src="./img/ui-menu-light.png">
+        <img class="navbar__btn" id="open-menu" src="./img/ui-menu-light.png">
         <span class="navbar__balance" id="user-balance">$1,250.<sup>67</sup></span>
-        <img class="navbar__btn search" src="./img/ui-search-light.png">
+        <img class="navbar__btn search" id="open-search" src="./img/ui-search-light.png">
     </nav>
 
     <section class="menu" id="menu">
 
-        <img class="menu__close" id="close" src="./img/ui-close-light.png">
+        <img class="menu__close" id="close-menu" src="./img/ui-close-light.png">
 
         <div class="menu__head">
             <span class="menu__head--welcome" id="local-timer">Good Afternoon</span>
@@ -46,9 +46,15 @@
 
     </section>
 
-    <section class="menu-blur" id="blur">
-        2
+    <section class="search-menu" id="search-menu">
+
+        <img class="search-menu__close" id="close-search" src="./img/ui-close-light.png">
+
+        <input type="text" class="search-menu__bar" id="search-query" placeholder="Search for a stock ..." spellcheck="false">
+
     </section>
+
+    <section class="menu-blur" id="blur"></section>
 
     <section class="graph">
         <div class="graph__visual">Placeholder for user balance graph</div>

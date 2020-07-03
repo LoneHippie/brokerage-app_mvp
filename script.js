@@ -1,6 +1,10 @@
 const menu = document.getElementById('menu');
-const btnOpen = document.getElementById('open');
-const btnClose = document.getElementById('close');
+const btnOpenMenu = document.getElementById('open-menu');
+const btnCloseMenu = document.getElementById('close-menu');
+
+const searchMenu = document.getElementById('search-menu');
+const btnOpenSearch = document.getElementById('open-search');
+const btnCloseSearch = document.getElementById('close-search');
 
 const blur = document.getElementById('blur');
 
@@ -10,14 +14,29 @@ const localTimer = document.getElementById('local-timer');
 
 //side menu functionality
 if (menu.classList.contains('active')) menu.classList.remove('active');
+if (searchMenu.classList.contains('active')) searchMenu.classList.remove('active');
 if (blur.classList.contains('active')) blur.classList.remove('active');
 
-btnOpen.addEventListener('click', function() {
+
+btnOpenMenu.addEventListener('click', function() {
     menu.classList.add('active');
     blur.classList.add('active');
 });
 
-btnClose.addEventListener('click', function() {
+btnCloseMenu.addEventListener('click', function() {
+    menu.classList.toggle('active');
+    blur.classList.toggle('active');
+});
+
+btnOpenSearch.addEventListener('click', function() {
+   searchMenu.classList.add('active');
+});
+
+btnCloseSearch.addEventListener('click', function() {
+    searchMenu.classList.toggle('active');
+});
+
+blur.addEventListener('click', function() {
     menu.classList.toggle('active');
     blur.classList.toggle('active');
 });
