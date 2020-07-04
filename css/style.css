@@ -9,7 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: linear-gradient(to bottom right, #fff, #00a8cc, #27496d); }
+  background-color: #fff; }
 
 .navbar {
   position: fixed;
@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #00a8cc;
+  background-color: #27496d;
   box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
   .navbar__balance {
     color: #fff;
@@ -37,7 +37,7 @@ body {
     margin: 0.75rem;
     padding: 0.5rem;
     border: 2px solid #fff;
-    background: linear-gradient(to bottom right, #00a8cc, #00a8cc, #27496d);
+    background: linear-gradient(to bottom right, #27496d, #142850);
     border-radius: 100px; }
 
 .menu {
@@ -67,12 +67,14 @@ body {
     .menu__head--welcome {
       text-transform: uppercase;
       color: #fff;
-      font-size: 3.5rem;
+      font-size: 3rem;
+      font-weight: 300;
       display: block; }
     .menu__head--timer {
       color: #00a8cc;
       font-size: 1.75rem;
-      display: block; }
+      display: block;
+      font-weight: 200; }
   .menu__option {
     margin-left: 1rem;
     padding-bottom: 1.5rem;
@@ -80,11 +82,13 @@ body {
     .menu__option--title {
       text-transform: uppercase;
       color: #fff;
-      font-size: 3.2rem; }
+      font-size: 2.8rem;
+      font-weight: 300; }
     .menu__option--desc {
       color: #00a8cc;
       font-size: 1.75rem;
-      display: block; }
+      display: block;
+      font-weight: 200; }
 
 .menu.active {
   left: 0%;
@@ -165,7 +169,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     font-size: 2rem;
-    background-color: #00a8cc; }
+    background-color: #27496d; }
     .saved__stock__name {
       margin: 1rem;
       display: inline-block; }
@@ -178,7 +182,8 @@ body {
         display: block;
         font-size: 1.5rem;
         letter-spacing: 2px;
-        color: #27496d; }
+        color: #00a8cc;
+        text-shadow: 1px 1px 2px #000; }
     .saved__stock__info {
       margin: 1rem;
       display: inline-block; }
@@ -189,6 +194,6 @@ body {
         border-radius: 10px;
         padding: 0rem 0.5rem; }
       .saved__stock__info .negative {
-        background-color: #cc2400; }
+        background-color: #aa110f; }
       .saved__stock__info .positive {
-        background-color: #00cc8a; }
+        background-color: #8cc014; }
