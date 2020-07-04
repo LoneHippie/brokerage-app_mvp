@@ -129,7 +129,8 @@ body {
     border-radius: 20px;
     font-size: 2.5rem;
     font-family: "Open Sans", sans-serif;
-    color: #0c7b93; }
+    color: #0c7b93;
+    z-index: 500; }
     .search-menu__bar:focus {
       outline: none;
       color: #fff;
@@ -155,6 +156,36 @@ body {
     background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.4), rgba(20, 40, 80, 0.8)), url(../img/placeholder-graph.jpg);
     background-size: 100% 28rem;
     box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
+
+.suggestions {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 1px solid #fff;
+  max-height: 21.5rem;
+  overflow-y: scroll;
+  background: linear-gradient(#27496d, #27496d, #27496d, #27496d, #27496d, #27496d, rgba(3, 14, 37, 0.3));
+  transform: translateY(-0.6rem); }
+  .suggestions__list {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.6rem; }
+  .suggestions .item {
+    width: 100%; }
+    .suggestions .item--short {
+      color: #fff;
+      font-weight: 600;
+      font-size: 2.5rem; }
+    .suggestions .item--full {
+      color: #00a8cc;
+      text-shadow: 1px 1px 2px #000;
+      font-size: 1.5rem; }
+
+.suggestions.active {
+  display: block; }
 
 .saved {
   margin: auto;
