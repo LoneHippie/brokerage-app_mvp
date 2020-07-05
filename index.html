@@ -50,11 +50,30 @@
 
         <img class="search-menu__close" id="close-search" src="./img/ui-close-light.png">
 
+        <span class="search-menu__title">Search By Name or Type</span>
+
+        <section class="container">
+            <div class="checks">
+                <span class="checks__label">Energy</span>
+                <input type="checkbox" class="checks__box" id="check-energy">
+            </div>
+
+            <div class="checks">
+                <span class="checks__label">Technology</span>
+                <input type="checkbox" class="checks__box" id="check-tech">
+            </div>
+
+            <div class="checks">
+                <span class="checks__label">Finances</span>
+                <input type="checkbox" class="checks__box" id="check-finance">
+            </div>
+        </section>
+
         <input type="text" class="search-menu__bar" id="search-query" placeholder="Search for a stock ..." spellcheck="false">
 
         <section class="suggestions" id="query-gen">
             <ul class="suggestions__list" id="gen">
-                
+
             </ul>
         </section>
 

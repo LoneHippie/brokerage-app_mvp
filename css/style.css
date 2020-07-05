@@ -9,7 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #fff; }
+  background: linear-gradient(to bottom right, #fff, #0c7b93, #27496d, #142850); }
 
 .navbar {
   position: fixed;
@@ -119,10 +119,42 @@ body {
     margin-bottom: -2rem;
     align-self: flex-end;
     z-index: 150; }
+  .search-menu__title {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3.2rem;
+    transform: translateY(2.5rem);
+    text-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801); }
+  .search-menu .container {
+    transform: translateY(4rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
+  .search-menu .checks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .search-menu .checks__label {
+      color: #00a8cc;
+      text-shadow: 1.5px 1.5px 2px #000;
+      font-size: 1.5rem;
+      padding-bottom: 0.5rem; }
+    .search-menu .checks__box {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: auto; }
   .search-menu__bar {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5rem;
+    margin-top: 6rem;
     display: block;
     width: 70%;
     padding-left: 1rem;
