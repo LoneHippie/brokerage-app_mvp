@@ -93,12 +93,15 @@ body {
     margin-top: 23.5rem;
     margin-left: 1rem; }
     .menu__language--option {
-      height: 3rem; }
+      height: 3rem;
+      border: 2px solid #0c7b93;
+      border-radius: 100px; }
     .menu__language--text {
       font-size: 2.5rem;
       font-weight: 300;
       color: #fff;
-      padding: 0rem 0.75rem; }
+      padding: 0rem 0.75rem;
+      text-shadow: 1px 1px 2px #000; }
 
 .menu.active {
   left: 0%;
