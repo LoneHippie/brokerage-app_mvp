@@ -9,7 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: linear-gradient(to bottom right, #fff, #0c7b93, #27496d, #142850); }
+  background: linear-gradient(#fff, rgba(12, 123, 147, 0.3), #0c7b93, #27496d, #27496d); }
 
 .navbar {
   position: fixed;

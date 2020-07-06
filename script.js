@@ -19,12 +19,15 @@ const finance = document.getElementById('check-finance');
 
 
 //side menu functionality
+
+//init
 if (menu.classList.contains('active')) menu.classList.remove('active');
 if (searchMenu.classList.contains('active')) searchMenu.classList.remove('active');
 if (blur.classList.contains('active')) blur.classList.remove('active');
 
 if (suggestions.classList.contains('active')) suggestions.classList.remove('active');
 
+//menu events
 btnOpenMenu.addEventListener('click', function() {
     menu.classList.add('active');
     blur.classList.add('active');
@@ -144,8 +147,17 @@ const stock42 = new Stock('SHOP', 'Shopfiy Inc', '$1029.97', 1, 1);
 const stock43 = new Stock('SWBI', 'Smith And Wesson Brands Inc', '$22.65', 1);
 const stock44 = new Stock('WIX', 'Wix.com Ltd', '$272.85', 1, 1);
 const stock45 = new Stock('ZM', 'Zoom Video COmmunications Inc', '$261.74', 1, 1);
+const stock46 = new Stock('CALB', 'California Bancorp', '$14.43', 0, 2);
+const stock47 = new Stock('COHN', 'Cohen & Company Inc', '$9.70', 0, 2);
+const stock48 = new Stock('DB', 'Deutsche Bank AG', '$9.53', 1, 2);
+const stock49 = new Stock('ELVT', 'Elevate Credit Inc', '$1.55', 1, 2);
+const stock50 = new Stock('EPR', 'EPR Properties', '$32.97', 0, 2);
+const stock51 = new Stock('EQBK', 'Equity Bankshares Inc', '$15.90', 1, 2);
+const stock52 = new Stock('EQIX', 'Equinix Inc', '$718.41', 0, 2);
+const stock53 = new Stock('EXCPU', 'Experience Investiments Corp', '$10.50', 1, 2);
+const stock54 = new Stock('EZPW', 'EZCorp Inc', '$5.92', 0, 2); 
 
-let stocks = [stock0, stock1, stock2, stock3, stock4, stock5, stock6, stock7, stock8, stock9, stock10, stock11, stock12, stock13, stock14, stock15, stock16, stock17, stock18, stock19, stock20, stock21, stock22, stock23, stock24, stock25, stock26, stock27, stock28, stock29, stock30, stock31, stock32, stock33, stock34, stock35, stock36, stock37, stock38, stock39, stock40, stock41, stock42, stock43, stock44, stock45];
+let stocks = [stock0, stock1, stock2, stock3, stock4, stock5, stock6, stock7, stock8, stock9, stock10, stock11, stock12, stock13, stock14, stock15, stock16, stock17, stock18, stock19, stock20, stock21, stock22, stock23, stock24, stock25, stock26, stock27, stock28, stock29, stock30, stock31, stock32, stock33, stock34, stock35, stock36, stock37, stock38, stock39, stock40, stock41, stock42, stock43, stock44, stock45, stock46, stock47, stock48, stock49, stock50, stock51, stock52, stock53, stock54];
 
 let stocksEnergy = stocks.filter(el => el.type === 0);
 let stocksTech = stocks.filter(el => el.type === 1);
@@ -154,8 +166,9 @@ let stocksSocial = stocks.filter(el => el.type === 3);
 let stocksTransit = stocks.filter(el => el.type === 4);
 
 // console.log(stocks);
-// console.log(stocksEnergy);
-// console.log(stocksTech);
+console.log(stocksEnergy);
+console.log(stocksTech);
+console.log(stocksFinance);
 // console.log(stocksSocial);
 // console.log(stocksTransit);
 
@@ -214,10 +227,10 @@ setInterval(() => { //will determine what to display from query matching based o
     }
 }, 1000);
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function(event) { //clears list on checkbox event
     if (event.target.id === 'check-energy' || event.target.id === 'check-tech' || event.target.id === 'check-finance') {
-        
         search.value = '';
+        insert.innerHTML = '';
     }
 })
 
