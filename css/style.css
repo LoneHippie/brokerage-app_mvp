@@ -90,7 +90,7 @@ body {
       display: block;
       font-weight: 200; }
   .menu__language {
-    margin-top: 20rem;
+    margin-top: 15rem;
     margin-left: 1rem; }
     .menu__language--option {
       height: 3rem; }
@@ -289,7 +289,7 @@ body {
       .saved__stock__info--value {
         margin-top: 0.25rem;
         font-size: 2.25rem;
-        font-weight: 300;
+        font-weight: 500;
         color: #fff;
         border-radius: 10px;
         padding: 0rem 0.5rem; }
