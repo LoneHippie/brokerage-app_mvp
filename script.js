@@ -180,8 +180,7 @@ const insert = document.getElementById('gen');
 
 //function that triggers on text input update
 
-let list;
-
+/*
 setInterval(() => { //will determine what to display from query matching based on checkbox combos
     if (tech.checked === true) {
         list = stocksTech;
@@ -226,6 +225,7 @@ setInterval(() => { //will determine what to display from query matching based o
         list = stocks;
     }
 }, 1000);
+*/
 
 document.addEventListener('click', function(event) { //clears list on checkbox event
     if (event.target.id === 'check-energy' || event.target.id === 'check-tech' || event.target.id === 'check-finance') {
@@ -242,7 +242,7 @@ search.addEventListener('input', function() {
 
     let queryMatch;
 
-    query !== '' ? queryMatch = list.filter(el => el.nameShort.includes(query)) : queryMatch = '';
+    query !== '' ? queryMatch = stocks.filter(el => el.nameShort.includes(query)) : queryMatch = '';
 
     queryMatch.length > 0 ? suggestions.classList.add('active') : suggestions.classList.remove('active');
 
