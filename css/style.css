@@ -11,6 +11,26 @@ html {
 body {
   background: linear-gradient(#fff, rgba(12, 123, 147, 0.3), #0c7b93, #27496d, #27496d); }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); }
+  100% {
+    opacity: 1; } }
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1; } }
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -18,7 +38,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   background-color: #27496d;
-  box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
+  box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801);
+  animation: dropDown 600ms ease-out; }
   .navbar__balance {
     color: #fff;
     font-weight: 600;
@@ -45,7 +66,8 @@ body {
   padding-top: 9rem;
   display: flex;
   flex-direction: column;
-  width: 85%; }
+  width: 85%;
+  animation: fadeIn 600ms ease-out; }
   .graph__visual {
     height: 28rem;
     background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.4), rgba(20, 40, 80, 0.8)), url(../img/placeholder-graph.jpg);
@@ -59,7 +81,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 90%;
-  box-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801); }
+  box-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801);
+  animation: slideUp 600ms ease-out; }
   .saved__title {
     padding: 1rem;
     background-color: #27496d;
