@@ -64,8 +64,8 @@ let min = new Date().getMinutes();
 min >= 30 ? min = 0.5 : min = 0;
 time = hourMarket + min;
 
-//initial load
-//market schedule
+
+//market schedule - triggers on reload/init
 time >= 9.5 && time < 16 ? marketTimer.textContent = `Market Closes in ${16 - time}hrs` : marketTimer.textContent = `Market Opens at 02:00`; 
 
 //local timezone menu greeting
@@ -76,20 +76,6 @@ if (hourLocal >= 6 && hourLocal < 12) {
 } else {
     localTimer.textContent = 'Good Evening';
 };
-
-//per minute update - disabled due to increasing menu open speed
-// setInterval(() => {
-//     time >= 9.5 && time < 16 ? marketTimer.textContent = `Market Closes in ${16 - time}hrs` : marketTimer.textContent = `Market Opens at 02:00`;
-
-//     if (hourLocal >= 6 && hourLocal < 12) {
-//         localTimer.textContent = 'Good Morning';
-//     } else if (hourLocal >= 12 && hourLocal <18) {
-//         localTimer.textContent = 'Good Afternoon';
-//     } else {
-//         localTimer.textContent = 'Good Evening';
-//     };
-
-// }, 60000);
 
 //dummy databasing
 
@@ -165,13 +151,6 @@ let stocksFinance = stocks.filter(el => el.type === 2);
 let stocksSocial = stocks.filter(el => el.type === 3);
 let stocksTransit = stocks.filter(el => el.type === 4);
 
-// console.log(stocks);
-console.log(stocksEnergy);
-console.log(stocksTech);
-console.log(stocksFinance);
-// console.log(stocksSocial);
-// console.log(stocksTransit);
-
 //stock search functionality
 
 const search = document.getElementById('search-query');
@@ -180,7 +159,7 @@ const insert = document.getElementById('gen');
 
 //function that triggers on text input update
 
-/*
+/* //function disabled, checkboxes no longer in use as of current versions
 setInterval(() => { //will determine what to display from query matching based on checkbox combos
     if (tech.checked === true) {
         list = stocksTech;
@@ -234,7 +213,7 @@ document.addEventListener('click', function(event) { //clears list on checkbox e
     }
 })
 
-search.addEventListener('input', function() {
+search.addEventListener('input', function() { //functionality for search menu search bar stock suggestions
 
     insert.innerHTML = '';
 
