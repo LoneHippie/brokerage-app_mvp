@@ -40,6 +40,70 @@ body {
     background: linear-gradient(to bottom right, #27496d, #142850);
     border-radius: 100px; }
 
+.graph {
+  margin: auto;
+  padding-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  width: 85%; }
+  .graph__visual {
+    height: 28rem;
+    background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.4), rgba(20, 40, 80, 0.8)), url(../img/placeholder-graph.jpg);
+    background-size: 100% 28rem;
+    box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
+
+.saved {
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  box-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801); }
+  .saved__title {
+    padding: 1rem;
+    background-color: #27496d;
+    border-bottom: 2px solid #0c7b93; }
+    .saved__title--main {
+      color: #fff;
+      font-weight: 300;
+      letter-spacing: 2px;
+      font-size: 1.75rem; }
+  .saved__stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    background-color: #27496d; }
+    .saved__stock__name {
+      margin: 1rem;
+      display: inline-block; }
+      .saved__stock__name--short {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #fff; }
+      .saved__stock__name--full {
+        display: block;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        color: #00a8cc;
+        text-shadow: 1px 1px 2px #000; }
+    .saved__stock__info {
+      margin: 1rem;
+      display: inline-block; }
+      .saved__stock__info--value {
+        margin-top: 0.25rem;
+        font-size: 2.25rem;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 10px;
+        padding: 0rem 0.5rem; }
+      .saved__stock__info .negative {
+        background-color: #aa110f; }
+      .saved__stock__info .positive {
+        background-color: #8cc014; }
+
 .menu {
   left: -100%;
   position: fixed;
@@ -115,6 +179,9 @@ body {
   background-color: rgba(3, 14, 37, 0.4);
   z-index: 75; }
 
+.menu-blur.active {
+  display: block; }
+
 .search-menu {
   position: fixed;
   right: -100%;
@@ -123,6 +190,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #27496d;
+  overflow-y: scroll;
   z-index: 100;
   /*
     &__title {
@@ -176,16 +244,18 @@ body {
     */
   transition: all 300ms; }
   .search-menu__close {
+    position: fixed;
     height: 2.5rem;
     width: 2.5rem;
     margin: 1rem;
+    padding-right: 2.3rem;
     margin-bottom: -2rem;
     align-self: flex-end;
     z-index: 150; }
   .search-menu__bar {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3rem;
+    margin-top: 4rem;
     display: block;
     width: 70%;
     padding-left: 1rem;
@@ -206,31 +276,17 @@ body {
   right: 0%;
   transition: all 500ms; }
 
-.menu-blur.active {
-  display: block; }
-
-.graph {
-  margin: auto;
-  padding-top: 9rem;
-  display: flex;
-  flex-direction: column;
-  width: 85%; }
-  .graph__visual {
-    height: 28rem;
-    background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.4), rgba(20, 40, 80, 0.8)), url(../img/placeholder-graph.jpg);
-    background-size: 100% 28rem;
-    box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
-
 .suggestions {
   display: none;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
   box-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801);
-  max-height: 21.5rem;
+  max-height: 16.5rem;
   overflow-y: scroll;
   background: linear-gradient(#27496d, #27496d, #27496d, #27496d, #27496d, #27496d, rgba(3, 14, 37, 0.3));
-  transform: translateY(-0.6rem); }
+  transform: translateY(-0.6rem);
+  z-index: 495; }
   .suggestions__list {
     list-style: none;
     padding-left: 1rem;
@@ -249,54 +305,77 @@ body {
 .suggestions.active {
   display: block; }
 
-.saved {
-  margin: auto;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+.category {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  box-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801); }
-  .saved__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  min-width: 75%;
+  max-width: 75%;
+  border-radius: 20px;
+  box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
+  .category__title {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
     padding: 1rem;
-    background-color: #27496d;
     border-bottom: 2px solid #0c7b93; }
-    .saved__title--main {
-      color: #fff;
-      font-weight: 300;
-      letter-spacing: 2px;
-      font-size: 1.75rem; }
-  .saved__stock {
+    .category__title--type {
+      color: #fff; }
+  .category__stock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 2rem;
     background-color: #27496d; }
-    .saved__stock__name {
+    .category__stock__name {
       margin: 1rem;
       display: inline-block; }
-      .saved__stock__name--short {
+      .category__stock__name--short {
         display: block;
         font-size: 2.5rem;
         font-weight: 400;
         color: #fff; }
-      .saved__stock__name--full {
+      .category__stock__name--full {
         display: block;
         font-size: 1.5rem;
         letter-spacing: 2px;
         color: #00a8cc;
         text-shadow: 1px 1px 2px #000; }
-    .saved__stock__info {
+    .category__stock__info {
       margin: 1rem;
       display: inline-block; }
-      .saved__stock__info--value {
+      .category__stock__info--value {
         margin-top: 0.25rem;
         font-size: 2.25rem;
         font-weight: 600;
         color: #fff;
         border-radius: 10px;
         padding: 0rem 0.5rem; }
-      .saved__stock__info .negative {
+      .category__stock__info .negative {
         background-color: #aa110f; }
-      .saved__stock__info .positive {
+      .category__stock__info .positive {
         background-color: #8cc014; }
+  .category__button {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex; }
+    .category__button--btn {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0.5rem 2.5rem;
+      background: linear-gradient(to top right, #0c7b93, #0c7b93, #00a8cc);
+      color: #fff;
+      font-size: 1.75rem;
+      font-weight: 300;
+      border-radius: 100px; }
+
+.last {
+  margin-bottom: 3rem; }
+
+.top {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }

@@ -58,33 +58,144 @@
 
     <section class="search-menu" id="search-menu">
 
-        <img class="search-menu__close" id="close-search" src="./img/ui-close-light.png">
+        <div class="top">
 
-        <!-- <span class="search-menu__title">Search By Name or Type</span> -->
+            <img class="search-menu__close" id="close-search" src="./img/ui-close-light.png">
 
-        <!-- <section class="container">
-            <div class="checks">
-                <span class="checks__label">Energy</span>
-                <input type="checkbox" class="checks__box" id="check-energy">
+            <input type="text" class="search-menu__bar" id="search-query" placeholder="Search for a stock ..." spellcheck="false">
+
+            <section class="suggestions" id="query-gen">
+                <ul class="suggestions__list" id="gen">
+
+                </ul>
+            </section>
+
+        </div>
+
+        <section class="category">
+
+            <div class="category__title">
+                <span class="category__title--type">Gas & Energy</span>
             </div>
 
-            <div class="checks">
-                <span class="checks__label">Technology</span>
-                <input type="checkbox" class="checks__box" id="check-tech">
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">BP</span>
+                    <span class="category__stock__name--full">British Petroleum</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value negative">$23.44</span>
+                </div>
             </div>
 
-            <div class="checks">
-                <span class="checks__label">Finances</span>
-                <input type="checkbox" class="checks__box" id="check-finance">
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">ZN</span>
+                    <span class="category__stock__name--full">Zion Oil & Gas Inc</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value positive">$0.27</span>
+                </div>
             </div>
-        </section> -->
 
-        <input type="text" class="search-menu__bar" id="search-query" placeholder="Search for a stock ..." spellcheck="false">
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">PCG</span>
+                    <span class="category__stock__name--full">PG&E Corporation</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value positive">$9.54</span>
+                </div>
+            </div>
 
-        <section class="suggestions" id="query-gen">
-            <ul class="suggestions__list" id="gen">
+            <div class="category__button">
+                <span class="category__button--btn">View All</span>
+            </div>
 
-            </ul>
+        </section>
+
+        <section class="category">
+
+            <div class="category__title">
+                <span class="category__title--type">Technology</span>
+            </div>
+
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">QCOM</span>
+                    <span class="category__stock__name--full">Qualcomm Inc</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value positive">$91.87</span>
+                </div>
+            </div>
+
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">NVDA</span>
+                    <span class="category__stock__name--full">Nvidia Corp</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value positive">$389.49</span>
+                </div>
+            </div>
+
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">ZNGA</span>
+                    <span class="category__stock__name--full">Zynga Inc</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value negative">$9.53</span>
+                </div>
+            </div>
+
+            <div class="category__button">
+                <span class="category__button--btn">View All</span>
+            </div>
+
+        </section>
+
+        <section class="category last">
+
+            <div class="category__title">
+                <span class="category__title--type">Banking & Finance</span>
+            </div>
+
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">V</span>
+                    <span class="category__stock__name--full">Visa Inc</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value positive">$195.67</span>
+                </div>
+            </div>
+
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">JPM</span>
+                    <span class="category__stock__name--full">JPMorgan Chase & Co</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value negative">$92.66</span>
+                </div>
+            </div>
+
+            <div class="category__stock">
+                <div class="category__stock__name">
+                    <span class="category__stock__name--short">CALB</span>
+                    <span class="category__stock__name--full">California Bancorp</span>
+                </div>
+                <div class="category__stock__info">
+                    <span class="category__stock__info--value negative">$14.43</span>
+                </div>
+            </div>
+
+            <div class="category__button">
+                <span class="category__button--btn">View All</span>
+            </div>
+
         </section>
 
     </section>
@@ -92,7 +203,7 @@
     <section class="menu-blur" id="blur"></section>
 
     <section class="graph">
-        <div class="graph__visual">VERSION 1.8</div>
+        <div class="graph__visual">VERSION 2.0</div>
     </section>
 
     <main class="saved">
@@ -193,8 +304,25 @@
 
     </main>
 
-    <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis obcaecati inventore minus similique dignissimos debitis dicta ipsa nisi suscipit laborum ullam labore minima eaque ducimus, asperiores, fugit reiciendis, quae sint! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit rem tempora iste vitae fuga? Sit eos, quidem, quibusdam ut veniam, fugit magni cupiditate assumenda iste molestias rem quos animi ratione! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis necessitatibus labore asperiores aut quasi sit vero explicabo aspernatur eaque! Soluta porro doloribus necessitatibus quisquam ea itaque ad repellat cum reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ad a ducimus rerum? Blanditiis, ducimus iste aperiam provident nihil hic ab debitis ex aut magnam qui commodi doloremque praesentium facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum commodi vero eaque cum ea? Quasi, ipsum? Hic earum ipsum, fugiat magni, inventore autem quia enim tempora illo mollitia omnis officiis?</p> -->
-    
+    <!-- <span class="search-menu__title">Search By Name or Type</span> -->
+
+            <!-- <section class="container">
+                <div class="checks">
+                    <span class="checks__label">Energy</span>
+                    <input type="checkbox" class="checks__box" id="check-energy">
+                </div>
+
+                <div class="checks">
+                    <span class="checks__label">Technology</span>
+                    <input type="checkbox" class="checks__box" id="check-tech">
+                </div>
+
+                <div class="checks">
+                    <span class="checks__label">Finances</span>
+                    <input type="checkbox" class="checks__box" id="check-finance">
+                </div>
+            </section> -->
+
 </body>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </html>
