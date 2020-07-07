@@ -19,14 +19,14 @@ body {
 
 @keyframes dropDown {
   0% {
-    opacity: 0;
+    opacity: 0.5;
     transform: translateY(-50px); }
   100% {
     opacity: 1; } }
 
 @keyframes slideUp {
   0% {
-    opacity: 0;
+    opacity: 0.6;
     transform: translateY(100px); }
   100% {
     opacity: 1; } }
@@ -66,8 +66,7 @@ body {
   padding-top: 9rem;
   display: flex;
   flex-direction: column;
-  width: 85%;
-  animation: fadeIn 600ms ease-out; }
+  width: 85%; }
   .graph__visual {
     height: 28rem;
     background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.4), rgba(20, 40, 80, 0.8)), url(../img/placeholder-graph.jpg);
@@ -188,7 +187,7 @@ body {
       width: 3rem;
       border: 2px solid #0c7b93;
       border-radius: 100px;
-      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../img/ui-lang-en2.png);
+      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../../img/ui-lang-en2.png);
       background-size: contain; }
     .menu__language--option--he {
       display: inline-block;
@@ -196,7 +195,7 @@ body {
       width: 3rem;
       border: 2px solid #0c7b93;
       border-radius: 100px;
-      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../img/ui-lang-he2.png);
+      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../../img/ui-lang-he2.png);
       background-size: contain; }
     .menu__language--text {
       font-size: 2.5rem;
