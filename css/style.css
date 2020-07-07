@@ -31,6 +31,12 @@ body {
   100% {
     opacity: 1; } }
 
+@keyframes spinToWin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(18000deg); } }
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -187,7 +193,7 @@ body {
       width: 3rem;
       border: 2px solid #0c7b93;
       border-radius: 100px;
-      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../../img/ui-lang-en2.png);
+      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.4), #0c7b93), url(../../img/ui-lang-en2.png);
       background-size: contain; }
     .menu__language--option--he {
       display: inline-block;
@@ -195,7 +201,7 @@ body {
       width: 3rem;
       border: 2px solid #0c7b93;
       border-radius: 100px;
-      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../../img/ui-lang-he2.png);
+      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.3), rgba(12, 123, 147, 0.6)), url(../../img/ui-lang-he2.png);
       background-size: contain; }
     .menu__language--text {
       font-size: 2.5rem;
@@ -296,7 +302,7 @@ body {
     display: block;
     width: 70%;
     padding-left: 1rem;
-    border-radius: 20px;
+    border-radius: 9px;
     border: none;
     font-size: 2.5rem;
     font-family: "Open Sans", sans-serif;
@@ -350,14 +356,15 @@ body {
   margin-top: 3rem;
   min-width: 77.5%;
   max-width: 77.5%;
-  border-radius: 20px;
+  border-radius: 9px;
   box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
   .category__title {
     text-align: center;
     font-size: 3rem;
     letter-spacing: 2px;
     padding: 1rem;
-    border-bottom: 2px solid #0c7b93; }
+    border-radius: 9px 9px 0px 0px;
+    background: linear-gradient(to top right, #0c7b93, #0c7b93, #00a8cc); }
     .category__title--type {
       color: #fff; }
   .category__stock {
@@ -396,13 +403,13 @@ body {
         background-color: #8cc014; }
   .category__button {
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 1.25rem;
     display: flex; }
     .category__button--btn {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      padding: 0.5rem 2.5rem;
+      padding: 0.5rem 3.25rem;
       background: linear-gradient(to top right, #0c7b93, #0c7b93, #00a8cc);
       color: #fff;
       font-size: 1.75rem;
