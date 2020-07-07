@@ -141,9 +141,18 @@ const stock50 = new Stock('EPR', 'EPR Properties', '$32.97', 0, 2);
 const stock51 = new Stock('EQBK', 'Equity Bankshares Inc', '$15.90', 1, 2);
 const stock52 = new Stock('EQIX', 'Equinix Inc', '$718.41', 0, 2);
 const stock53 = new Stock('EXCPU', 'Experience Investiments Corp', '$10.50', 1, 2);
-const stock54 = new Stock('EZPW', 'EZCorp Inc', '$5.92', 0, 2); 
+const stock54 = new Stock('EZPW', 'EZCorp Inc', '$5.92', 0, 2);
+const stock55 = new Stock('FB', 'Facebook Inc', '$223.42', 0, 3);
+const stock56 = new Stock('MSFT', 'Microsoft Corp', '$206.26', 1, 1);
+const stock57 = new Stock('GOOGL', 'Alphabet Inc', '$1469.93', 1, 1);
+const stock58 = new Stock('APPL', 'Apple Inc', '$364.11', 0, 1);
+const stock59 = new Stock('MA', 'Mastercard Incorporated', '$302.42', 1, 2);
+const stock60 = new Stock('TSLA', 'Tesla Inc', '$1208.66', 0, 1);
+const stock61 = new Stock('PM', 'Philip Morris International Inc', 1);
+const stock62 = new Stock('NFLX', 'Netflix Inc', '$476.89', 1, 1);
+const stock63 = new Stock('PYPL', 'Paypal Holdings Inc', '$177.21', 0, 2);
 
-let stocks = [stock0, stock1, stock2, stock3, stock4, stock5, stock6, stock7, stock8, stock9, stock10, stock11, stock12, stock13, stock14, stock15, stock16, stock17, stock18, stock19, stock20, stock21, stock22, stock23, stock24, stock25, stock26, stock27, stock28, stock29, stock30, stock31, stock32, stock33, stock34, stock35, stock36, stock37, stock38, stock39, stock40, stock41, stock42, stock43, stock44, stock45, stock46, stock47, stock48, stock49, stock50, stock51, stock52, stock53, stock54];
+let stocks = [stock0, stock1, stock2, stock3, stock4, stock5, stock6, stock7, stock8, stock9, stock10, stock11, stock12, stock13, stock14, stock15, stock16, stock17, stock18, stock19, stock20, stock21, stock22, stock23, stock24, stock25, stock26, stock27, stock28, stock29, stock30, stock31, stock32, stock33, stock34, stock35, stock36, stock37, stock38, stock39, stock40, stock41, stock42, stock43, stock44, stock45, stock46, stock47, stock48, stock49, stock50, stock51, stock52, stock53, stock54, stock55, stock56, stock57, stock58, stock59, stock60, stock61, stock62, stock63];
 
 let stocksEnergy = stocks.filter(el => el.type === 0);
 let stocksTech = stocks.filter(el => el.type === 1);

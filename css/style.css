@@ -79,7 +79,7 @@ body {
     background-size: 100% 28rem;
     box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801); }
 
-.saved {
+.portfolio {
   margin: auto;
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -88,48 +88,143 @@ body {
   width: 90%;
   box-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801);
   animation: slideUp 600ms ease-out; }
-  .saved__title {
+  .portfolio__title {
     padding: 1rem;
     background-color: #27496d;
-    border-bottom: 2px solid #0c7b93; }
-    .saved__title--main {
+    border-bottom: 2px solid #0c7b93;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .portfolio__title--main {
       color: #fff;
       font-weight: 300;
       letter-spacing: 2px;
       font-size: 1.9rem; }
-  .saved__stock {
+    .portfolio__title--desc {
+      color: #fff;
+      font-weight: 300;
+      letter-spacing: 2px;
+      font-size: 1.9rem; }
+  .portfolio__stock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 2rem;
     background-color: #27496d; }
-    .saved__stock__name {
+    .portfolio__stock__name {
       margin: 1rem;
       display: inline-block; }
-      .saved__stock__name--short {
+      .portfolio__stock__name--short {
         display: block;
         font-size: 2.5rem;
         font-weight: 400;
         color: #fff; }
-      .saved__stock__name--full {
+      .portfolio__stock__name--full {
         display: block;
         font-size: 1.5rem;
         letter-spacing: 2px;
         color: #00a8cc;
         text-shadow: 1px 1px 2px #000; }
-    .saved__stock__info {
+    .portfolio__stock__info {
       margin: 1rem;
       display: inline-block; }
-      .saved__stock__info--value {
+      .portfolio__stock__info--value {
         margin-top: 0.25rem;
         font-size: 2.25rem;
         font-weight: 600;
         color: #fff;
         border-radius: 10px;
         padding: 0rem 0.5rem; }
-      .saved__stock__info .negative {
+      .portfolio__stock__info .negative {
         background-color: #aa110f; }
-      .saved__stock__info .positive {
+      .portfolio__stock__info .positive {
+        background-color: #8cc014; }
+  .portfolio__balance {
+    display: flex;
+    flex-direction: column; }
+    .portfolio__balance__title {
+      padding: 1rem;
+      padding-top: 3.5rem;
+      background-color: #27496d;
+      border-bottom: 2px solid #0c7b93;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .portfolio__balance__title--main {
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        font-size: 1.9rem; }
+    .portfolio__balance__info {
+      padding: 1.5rem 1rem;
+      background-color: #27496d;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .portfolio__balance__info--ammount {
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #fff; }
+      .portfolio__balance__info--add {
+        height: 2rem;
+        margin: 0.75rem;
+        padding: 0.5rem;
+        border: 2px solid #fff;
+        border-radius: 100px;
+        background: linear-gradient(to bottom right, #27496d, #142850); }
+
+.watchlist {
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  box-shadow: 0px 3px 6px rgba(1, 8, 15, 0.801);
+  animation: slideUp 600ms ease-out; }
+  .watchlist__title {
+    padding: 1rem;
+    background-color: #27496d;
+    border-bottom: 2px solid #0c7b93; }
+    .watchlist__title--main {
+      color: #fff;
+      font-weight: 300;
+      letter-spacing: 2px;
+      font-size: 1.9rem; }
+  .watchlist__stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    background-color: #27496d; }
+    .watchlist__stock__name {
+      margin: 1rem;
+      display: inline-block; }
+      .watchlist__stock__name--short {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #fff; }
+      .watchlist__stock__name--full {
+        display: block;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        color: #00a8cc;
+        text-shadow: 1px 1px 2px #000; }
+    .watchlist__stock__info {
+      margin: 1rem;
+      display: inline-block; }
+      .watchlist__stock__info--value {
+        margin-top: 0.25rem;
+        font-size: 2.25rem;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 10px;
+        padding: 0rem 0.5rem; }
+      .watchlist__stock__info .negative {
+        background-color: #aa110f; }
+      .watchlist__stock__info .positive {
         background-color: #8cc014; }
 
 .menu {
@@ -193,7 +288,7 @@ body {
       width: 3rem;
       border: 2px solid #0c7b93;
       border-radius: 100px;
-      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../img/ui-lang-en2.png);
+      background-image: url(../../img/ui-lang-en2.png);
       background-size: contain; }
     .menu__language--option--he {
       display: inline-block;
@@ -201,7 +296,7 @@ body {
       width: 3rem;
       border: 2px solid #0c7b93;
       border-radius: 100px;
-      background: linear-gradient(to bottom right, rgba(0, 168, 204, 0.3), rgba(12, 123, 147, 0.65), #0c7b93), url(../img/ui-lang-he2.png);
+      background-image: url(../../img/ui-lang-he2.png);
       background-size: contain; }
     .menu__language--text {
       font-size: 2.5rem;
