@@ -45,7 +45,8 @@ body {
   justify-content: space-between;
   background-color: #27496d;
   box-shadow: 4px 3px 15px rgba(16, 22, 29, 0.801);
-  animation: dropDown 600ms ease-out; }
+  animation: dropDown 600ms ease-out;
+  z-index: 20; }
   .navbar__balance {
     color: #fff;
     font-weight: 600;
@@ -72,12 +73,8 @@ body {
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
-  width: 100%; }
-  .graph--user {
-    display: block;
-    height: 50rem;
-    transform-origin: center;
-    width: 50rem; }
+  width: 100%;
+  z-index: 1; }
   .graph__visual {
     height: 35rem;
     position: relative;
